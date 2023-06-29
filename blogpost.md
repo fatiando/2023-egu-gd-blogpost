@@ -1,7 +1,5 @@
 ---
-citeproc: true
-metadata:
-  bibliography: "references.bib"
+title: "Fatiando a Terra: research with open-source software"
 ---
 
 # Fatiando a Terra: research with open-source software
@@ -76,7 +74,7 @@ Computing the gravitational field of large structures can provide additional
 insight to applications in Geodynamics.
 For example, validating numerical models against observed gravity data, and
 inverting for Moho depths from satellite gravity data on continental scales
-[@uieda2016]
+[@uieda2016].
 These processes introduce the challenge of accounting for the curvature of the
 Earth during the gravity modelling, where the classical rectangular prisms are
 not well-suited for the task.
@@ -152,19 +150,21 @@ community to join and participate.
 
 We also aim to promote best practices for software development among the
 scientific community.
-They include adding comprehensive and easy to navigate documentation for every
-piece of code, extensive test suites that ensure the software works as
-expected, and peer-review processes of new changes to the code.
+They include documenting every piece of code, writing extensive test suites
+that ensure the software works as expected, and peer-review every new change to
+the code.
 Following these and other best practices helps to create high quality research
-software, and also environments where other people can easily collaborate and
-learn more about software development.
+software, and also set the environment for other people to easily collaborate
+and learn more about software development.
 
 ## Community
 
+<!--
 - Contributors from all around the world
 - Scientific collaborations beyond papers
 - Efforts to solve common problems through open-source software
 - Invite people
+-->
 
 Throughout the years, a community of developers, contributors and users raised
 around Fatiando, including people from all around the world.
@@ -172,15 +172,27 @@ These interactions are another form of scientific collaboration that exceeds
 co-authorship of papers.
 Researchers from different regions of the world join efforts on solving common
 problems through collaboratively developed tools.
+We invite everyone to [join the conversation][contact].
 
 
 ## Roadmap for the future
 
+<!--
 - BIRS event
   - invite virtual participants?
 - SimPEG and the ecosystem (Software Underground)
 - Transform
+-->
 
+Seeing into the future, we expect great things for the project. By the end of
+July, the Fatiando a Terra and [SimPEG][simpeg] communities will join in a
+[BIRS Workshop][birs] in Banff, Canada, to work on future roadmaps for the two
+projects and to join efforts to create further interactions.
+
+We plan to keep building the project, developing new tools, and improving what
+we already have. Along the way we expect to gain more contributors, enlarge the
+community and strengthen the relationships with the rest of the Python
+geoscientific ecosystem.
 
 ## References
 
@@ -199,3 +211,5 @@ problems through collaboratively developed tools.
 [pooch]: https://www.fatiando.org/pooch
 [ensaio]: https://www.fatiando.org/ensaio
 [tesseroid-layer]: https://www.fatiando.org/ensaio
+[simpeg]: https://simpeg.xyz
+[birs]: https://birs-2023.softwareunderground.org
