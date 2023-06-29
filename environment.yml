@@ -1,0 +1,22 @@
+name: 2023-egu-gd
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.*
+  - numpy
+  - matplotlib
+  - pandas
+  - xarray
+  - netcdf4
+  - pygmt
+  # Fatiando
+  - ensaio
+  - pooch
+  - verde
+  - harmonica
+  - boule
+  - choclo
+  # IPython and Jupyter
+  - ipython
+  # Livereload
+  - livereload
