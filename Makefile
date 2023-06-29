@@ -1,5 +1,6 @@
 PROJECT = blogpost
 REFERENCES = references.bib
+FIGS = figs
 OUTDIR = _build
 
 pdf: $(OUTDIR)/$(PROJECT).pdf
@@ -24,8 +25,11 @@ $(OUTDIR)/$(PROJECT).pdf: $(PROJECT).md | $(OUTDIR) $(REFERENCES)
 $(OUTDIR)/$(PROJECT).docx: $(PROJECT).md | $(OUTDIR) $(REFERENCES)
 	pandoc -s --bibliography $(REFERENCES) --citeproc -o $@ $<
 
-$(OUTDIR)/index.html: $(PROJECT).md | $(OUTDIR) $(REFERENCES)
+$(OUTDIR)/index.html: $(PROJECT).md | $(OUTDIR) $(REFERENCES) $(OUTDIR)/$(FIGS)
 	pandoc -s --bibliography $(REFERENCES) --citeproc -o $@ $<
+
+$(OUTDIR)/$(FIGS): $(FIGS) | $(OUTDIR)
+	cp -r $< $@
 
 $(OUTDIR):
 	mkdir $@

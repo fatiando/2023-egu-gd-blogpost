@@ -38,8 +38,7 @@ Layout:
 
 
 [Fatiando a Terra][fatiando] is a community-driven project with the goal to
-build open-source Python tools for geophysics, aimed to be used for research,
-exploration and teaching.
+build open-source Python tools for geophysics.
 
 The project started in South America more than ten years ago, as part of the
 PhD dissertations of a [group of graduate students][founders] from Rio de
@@ -61,72 +60,49 @@ data files from the web, and [Ensaio][ensaio] provides curated open-licensed
 geophysical datasets useful for research and teaching.
 
 
-## Example: Gravity fields of large-scale structures
+
+## What you can do with Fatiando tools?
 
 <!--
-- Tesseroids
-- Example of terrain effect using tesseroids
-- Leo's paper on moho inversion
-- Santi's paper on gradient-boosted equivalent sources
+- Interpolating large datasets with gb-eqls
+- Modelling gravitational fields of continental or global scales structures
+  with tesseroids
+    - Moho inversions
+    - Validation of geodynamics numerical simulations
+- Processing gravity data
 -->
 
-Computing the gravitational field of large structures can provide additional
-insight to applications in Geodynamics.
-For example, validating numerical models against observed gravity data, and
-inverting for Moho depths from satellite gravity data on continental scales
-[@uieda2016].
-These processes introduce the challenge of accounting for the curvature of the
-Earth during the gravity modelling, where the classical rectangular prisms are
-not well-suited for the task.
+Fatiando tools can be used in several different geophysical applications.
+For example, computing the gravitational fields of large structures can provide
+relevant insight to Geodynamic applications, like validating numerical models
+against observed gravity data, or inverting Moho depths from satellite gravity
+data on continental scales [@uieda2016].
+[Harmonica][harmonica] allows to calculate the gravitational field of large
+scale structures using _tesseroids_, also known as spherical prisms, that take
+into account the curvature of the Earth.
+They come handy also in data processing steps, like terrain correction.
 
-Instead, we can build our models using _tesseroids_, also known as rectangular
-prisms.
-[Harmonica][harmonica] offers tools to compute their gravitational fields
-on any observation point.
+![Terrain effect over South America](figs/terrain-correction-south-america.png)
 
-Let's start by downloading a topography grid with [Ensaio][ensaio]:
+[Harmonica][harmonica]'s [gradient-boosted equivalent sources][gb-eq] allow to
+interpolate very large gravity and magnetic datasets relying on the equivalent
+sources technique. For example, they allowed us to generate a regular grid of
+almost 2 million gravity observations over Australia [@soler2021].
 
-```python
-import ensaio
-import xarray as xr
+![Observed and interpolated a large gravity dataset over Australia. The
+interpolation was carried out through Gradient-boosted equivalent
+sources](figs/australia.png)
 
-topo_fname = ensaio.fetch_earth_topography(version=1)
-topo = xr.load_dataarray(topo_fname)
-```
+Moreover, [Harmonica][harmonica] and [Boule][boule] offer all the tools needed
+to process gravity data, from observed gravity up to gridded residuals:
+removing normal gravity with [Boule][boule]'s ellipsoids, computing the terrain
+correction by forward modelling a model of the topography, removing the
+regional field with deep equivalent sources, and producing a gridded product of
+the residual field using equivalent sources.
 
-Then we can build a _tesseroid layer_ using [Harmonica][harmonica], which
-creates a 3D representation of the topography using tesseroids:
-
-```python
-import harmonica as hm
-import boule as bl
-
-density = xr.where(topo > 0, 2670.0, 1040.0 - 2670.0)
-reference = bl.WGS84.geocentric_radius(latitude)
-surface = topo + reference
-
-tesseroids = hm.tesseroid_layer(
-    coordinates=(topo.longitude, topo.latitude),
-    surface=surface,
-    reference=reference,
-    properties={"density": density},
-)
-```
-
-The `reference` is defined as the surface of the reference ellipsoid
-provided by [Boule][boule], `surface` is the geocentric radii of the
-topographic heights, and `density` contains the density of each tesseroid,
-depending if they represent continental masses or water bodies.
-
-We can easily compute the gravitational effect of these tesseroids with:
-
-```python
-terrain_effect = tesseroids.tesseroid_layer.gravity(coordinates, field="g_z")
-```
-
-And finally produce a plot of the computed terrain effect over South America:
-
-![Terrain effect over South America](figs/terrain-effect.jpg)
+![Processed gravity data over Bushveld, Southern Africa: (a) observed gravity
+data, (b) gravity disturbance. (c) Bouguer gravity disturbance, and (d) regular
+grid of the residual field.](figs/south-africa-gravity.png)
 
 
 ## Open and reproducible science
@@ -144,35 +120,20 @@ science.
 The software developed by the project is released under open-source licences,
 making it freely accessible to any researcher, and ensuring that any result
 obtained through their usage could be reproduced.
-Moreover, we develop these tools [in the open][contact], through a transparent
-and auditable process, to which we invite everyone in the geoscientific
-community to join and participate.
+Moreover, we develop these tools in the open, through a transparent and
+auditable process, to which [we invite everyone to join and
+participate][contact].
+This opened the possibility to collaborate with researchers from around the
+world beyond the scientific paper, joining efforts to solve common problems and
+build tools in a collaboratively way.
 
 We also aim to promote best practices for software development among the
-scientific community.
-They include documenting every piece of code, writing extensive test suites
-that ensure the software works as expected, and peer-review every new change to
-the code.
+scientific community, like creating good documentation, writing tests that
+guarantee the software works as expected, and peer-review process of new
+additions to the code.
 Following these and other best practices helps to create high quality research
 software, and also set the environment for other people to easily collaborate
 and learn more about software development.
-
-## Community
-
-<!--
-- Contributors from all around the world
-- Scientific collaborations beyond papers
-- Efforts to solve common problems through open-source software
-- Invite people
--->
-
-Throughout the years, a community of developers, contributors and users raised
-around Fatiando, including people from all around the world.
-These interactions are another form of scientific collaboration that exceeds
-co-authorship of papers.
-Researchers from different regions of the world join efforts on solving common
-problems through collaboratively developed tools.
-We invite everyone to [join the conversation][contact].
 
 
 ## Roadmap for the future
@@ -213,3 +174,4 @@ geoscientific ecosystem.
 [tesseroid-layer]: https://www.fatiando.org/ensaio
 [simpeg]: https://simpeg.xyz
 [birs]: https://birs-2023.softwareunderground.org
+[gb-eq]: https://www.fatiando.org/harmonica/latest/user_guide/equivalent_sources/gradient-boosted-eqs.html

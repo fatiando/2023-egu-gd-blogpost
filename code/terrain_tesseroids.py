@@ -12,6 +12,8 @@ import xarray as xr
 
 import harmonica as hm
 
+figs_dir = Path(__file__).parent / ".." / "figs"
+
 fname = ensaio.fetch_earth_topography(version=1)
 topo = xr.load_dataarray(fname)
 
@@ -69,6 +71,7 @@ fig.grdimage(
     nan_transparent=True,
 )
 fig.basemap(frame=True)
-fig.colorbar(frame='af+l"Gravity [mGal]"', position="JCR")
+fig.colorbar(frame='af+l"mGal"', position="JCR")
 fig.coast(shorelines="0.5p,black", borders=["1/0.5p,black"])
+fig.savefig(figs_dir / "terrain-correction-south-america.png")
 fig.show()
