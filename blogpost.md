@@ -16,7 +16,7 @@ regions of the world.
 
 > Fun fact: Fatiando a Terra means "slicing the Earth" in Portuguese.
 
-Nowadays the project is composed by a set of different Python libraries, each
+Nowadays, the project is composed of a set of different Python libraries, each
 one with a specific goal and scope. [Verde][verde] offers tools for spatial
 data handling and interpolation, with a machine-learning taste.
 [Harmonica][harmonica] provides tools for processing and modelling gravity and
@@ -29,23 +29,24 @@ geophysical datasets useful for research and teaching.
 
 ## What you can do with Fatiando tools?
 
-Fatiando tools can be used in several different geophysical applications.
+Fatiando tools can be used in a wide range of geophysical applications.
 For example, computing the gravitational fields of large structures can provide
 relevant insight to Geodynamic applications, like validating numerical models
 against observed gravity data, or inverting Moho depths from satellite gravity
 data on continental scales [@uieda2016].
-[Harmonica][harmonica] allows to calculate the gravitational field of large
-scale structures using [_tesseroids_][tesseroids], also known as spherical
-prisms, that take into account the curvature of the Earth.
+[Harmonica][harmonica] offers tools to calculate the gravitational field of
+large scale structures using [_tesseroids_][tesseroids], also known as
+spherical prisms, that take into account the curvature of the Earth.
 They come handy also in data processing steps, like terrain correction.
 
 ![Terrain effect over South America computed using
 tesseroids.](figs/terrain-correction-south-america.png)
 
-[Harmonica][harmonica]'s [gradient-boosted equivalent sources][gb-eq] allow to
-interpolate very large gravity and magnetic datasets relying on the equivalent
-sources technique. For example, they allowed us to generate a regular grid of
-almost 2 million gravity observations over Australia [@soler2021].
+[Harmonica][harmonica]'s [gradient-boosted equivalent sources][gb-eq] are
+capable of interpolating very large gravity and magnetic datasets relying on
+the equivalent sources technique. For example, they allowed us to generate
+a regular grid of almost 2 million gravity observations over Australia
+[@soler2021].
 
 ![Observed and interpolated a large gravity dataset over Australia. The
 interpolation was carried out through Gradient-boosted equivalent
@@ -74,9 +75,9 @@ by using it more reproducible.
 Moreover, we develop these tools in the open, through a transparent and
 auditable process, to which [we invite everyone to join and
 participate][contact].
-This process had created opportunities for collaborations between researchers
+This process has created opportunities for collaborations between researchers
 from around the world, beyond the scientific paper: joining efforts to solve
-common problems and build tools in a collaboratively way.
+common problems and build tools in a collaborative way.
 
 We also aim to promote best practices for software development among the
 scientific community, like creating good documentation, writing tests that
