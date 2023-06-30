@@ -15,8 +15,8 @@ clean:
 show: $(OUTDIR)/$(PROJECT).pdf
 	xdg-open $<
 
-serve: $(OUTDIR)/index.html
-	livereload --target $(OUTDIR) $(OUTDIR)
+serve:
+	python serve.py
 
 
 $(OUTDIR)/$(PROJECT).pdf: $(PROJECT).md | $(OUTDIR) $(REFERENCES)
