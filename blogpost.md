@@ -4,39 +4,6 @@ title: "Fatiando a Terra: research with open-source software"
 
 # Fatiando a Terra: research with open-source software
 
-<!--
-Mention:
-
-- introduce the project
-- history
-- what you can do with fatiando
-- motivations and ultimate goals
-  - open and reproducible science
-  - encourage collaboration between researchers
-  - promote best-practices for software development in scientific software
-- connections to geodynamics
-  - forward modelling with tesseroids
-  - moho inversions with tesseroids
-- mention simpeg and the ecosystem
-- invite ppl to the website
-- who develops it?
-
-Figures:
-
-- Logo
-- map of visits to the website?
-- 3d plot of prisms?
-- gravity map over bushveld?
-- gravity correction with tesseroids over southamerica?
-
-Layout:
-
-- Introduce the project
-- Why?
-- Who?
--->
-
-
 [Fatiando a Terra][fatiando] is a community-driven project with the goal to
 build open-source Python tools for geophysics.
 
@@ -60,17 +27,7 @@ data files from the web, and [Ensaio][ensaio] provides curated open-licensed
 geophysical datasets useful for research and teaching.
 
 
-
 ## What you can do with Fatiando tools?
-
-<!--
-- Interpolating large datasets with gb-eqls
-- Modelling gravitational fields of continental or global scales structures
-  with tesseroids
-    - Moho inversions
-    - Validation of geodynamics numerical simulations
-- Processing gravity data
--->
 
 Fatiando tools can be used in several different geophysical applications.
 For example, computing the gravitational fields of large structures can provide
@@ -108,14 +65,6 @@ grid of the residual field.](figs/south-africa-gravity.png)
 
 ## Open and reproducible science
 
-<!--
-- Motivations
-  - open and reproducible science
-  - encourage collaboration between researchers
-  - promote best-practices for software development in scientific software
-- Tutorials at Transform events (swung)
--->
-
 Fatiando developers and contributors are committed to build a more open and
 reproducible science.
 All its software is released under open-source licences, making it freely
@@ -140,13 +89,6 @@ and learn more about software development.
 
 ## Roadmap for the future
 
-<!--
-- BIRS event
-  - invite virtual participants?
-- SimPEG and the ecosystem (Software Underground)
-- Transform
--->
-
 We expect great things for the future of the project.
 By the end of July, the Fatiando a Terra and [SimPEG][simpeg] communities will
 join in a [BIRS Workshop][birs] in Banff, Canada, to work on future roadmaps
@@ -156,6 +98,7 @@ We plan to keep building the project, developing new tools, and improving the
 existing ones. Along the way we expect to gain more contributors, enlarge the
 community and strengthen the relationships with the rest of the Python
 geoscientific ecosystem.
+
 
 ## References
 
