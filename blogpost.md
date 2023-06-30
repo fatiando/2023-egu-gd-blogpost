@@ -78,11 +78,12 @@ relevant insight to Geodynamic applications, like validating numerical models
 against observed gravity data, or inverting Moho depths from satellite gravity
 data on continental scales [@uieda2016].
 [Harmonica][harmonica] allows to calculate the gravitational field of large
-scale structures using _tesseroids_, also known as spherical prisms, that take
-into account the curvature of the Earth.
+scale structures using [_tesseroids_][tesseroids], also known as spherical
+prisms, that take into account the curvature of the Earth.
 They come handy also in data processing steps, like terrain correction.
 
-![Terrain effect over South America](figs/terrain-correction-south-america.png)
+![Terrain effect over South America computed using
+tesseroids.](figs/terrain-correction-south-america.png)
 
 [Harmonica][harmonica]'s [gradient-boosted equivalent sources][gb-eq] allow to
 interpolate very large gravity and magnetic datasets relying on the equivalent
@@ -91,7 +92,7 @@ almost 2 million gravity observations over Australia [@soler2021].
 
 ![Observed and interpolated a large gravity dataset over Australia. The
 interpolation was carried out through Gradient-boosted equivalent
-sources](figs/australia.png)
+sources.](figs/australia.png)
 
 Moreover, [Harmonica][harmonica] and [Boule][boule] offer all the tools needed
 to process gravity data, from observed gravity up to gridded residuals:
@@ -115,24 +116,25 @@ grid of the residual field.](figs/south-africa-gravity.png)
 - Tutorials at Transform events (swung)
 -->
 
-Fatiando developers are committed to build a more open and reproducible
-science.
-The software developed by the project is released under open-source licences,
-making it freely accessible to any researcher, and ensuring that any result
-obtained through their usage could be reproduced.
+Fatiando developers and contributors are committed to build a more open and
+reproducible science.
+All its software is released under open-source licences, making it freely
+accessible to any researcher, and helping to make scientific results obtained
+by using it more reproducible.
+
 Moreover, we develop these tools in the open, through a transparent and
 auditable process, to which [we invite everyone to join and
 participate][contact].
-This opened the possibility to collaborate with researchers from around the
-world beyond the scientific paper, joining efforts to solve common problems and
-build tools in a collaboratively way.
+This process had created opportunities for collaborations between researchers
+from around the world, beyond the scientific paper: joining efforts to solve
+common problems and build tools in a collaboratively way.
 
 We also aim to promote best practices for software development among the
 scientific community, like creating good documentation, writing tests that
-guarantee the software works as expected, and peer-review process of new
-additions to the code.
+guarantee the software works as expected, and peer-reviewing new additions to
+the code.
 Following these and other best practices helps to create high quality research
-software, and also set the environment for other people to easily collaborate
+software, and set the environment for other people to easily collaborate
 and learn more about software development.
 
 
@@ -145,13 +147,13 @@ and learn more about software development.
 - Transform
 -->
 
-Seeing into the future, we expect great things for the project. By the end of
-July, the Fatiando a Terra and [SimPEG][simpeg] communities will join in a
-[BIRS Workshop][birs] in Banff, Canada, to work on future roadmaps for the two
-projects and to join efforts to create further interactions.
+We expect great things for the future of the project.
+By the end of July, the Fatiando a Terra and [SimPEG][simpeg] communities will
+join in a [BIRS Workshop][birs] in Banff, Canada, to work on future roadmaps
+for the two projects and to join efforts to create further interactions.
 
-We plan to keep building the project, developing new tools, and improving what
-we already have. Along the way we expect to gain more contributors, enlarge the
+We plan to keep building the project, developing new tools, and improving the
+existing ones. Along the way we expect to gain more contributors, enlarge the
 community and strengthen the relationships with the rest of the Python
 geoscientific ecosystem.
 
@@ -175,3 +177,4 @@ geoscientific ecosystem.
 [simpeg]: https://simpeg.xyz
 [birs]: https://birs-2023.softwareunderground.org
 [gb-eq]: https://www.fatiando.org/harmonica/latest/user_guide/equivalent_sources/gradient-boosted-eqs.html
+[tesseroids]: https://www.fatiando.org/harmonica/latest/user_guide/forward_modelling/tesseroid.html#tesseroid
