@@ -6,6 +6,17 @@ title: "Fatiando a terra: a journey into open-source software for Geophysics"
 
 ![](figs/fatiando-banner.png)
 
+**A day in the life of a Geophysicist often involves engaging in tasks such as
+data downloading, processing, modeling, or some type of inversion.
+Unfortunately, these tasks are often burdensome or limited to closed-source
+software solutions. The Fatiando a Terra projects aims at
+overcoming some of these difficulties by offering a completely open-source
+Python toolbox tailored for Geoscientists. This week Santiago Soler, a postdoc
+at University of British Columbia and one of the main software developers, will
+guide us through the world of Fatiando, providing insights into its
+capabilities and sharing how you can actively participate and contribute to
+this exciting project.**
+
 [Fatiando a Terra][fatiando] is a community-driven project with the goal to
 build open-source Python tools for geophysics.
 
