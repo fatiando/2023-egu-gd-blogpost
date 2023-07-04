@@ -4,6 +4,8 @@ title: "Fatiando a Terra: research with open-source software"
 
 # Fatiando a Terra: research with open-source software
 
+![](figs/fatiando-banner.png)
+
 [Fatiando a Terra][fatiando] is a community-driven project with the goal to
 build open-source Python tools for geophysics.
 
