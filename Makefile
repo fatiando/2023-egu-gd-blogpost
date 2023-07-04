@@ -4,7 +4,7 @@ FIGSDIR = figs
 FIGURES := $(FIGSDIR)/$(wildcard *)
 OUTDIR = _build
 
-.PHONY: pad docx html clean show serve figures
+.PHONY: pdf docx html clean show serve figures
 
 pdf: $(OUTDIR)/$(PROJECT).pdf
 
