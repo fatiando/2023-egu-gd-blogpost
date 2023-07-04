@@ -2,8 +2,6 @@
 title: "Fatiando a Terra: a journey into open-source software for Geophysics"
 ---
 
-# Fatiando a Terra: a journey into open-source software for Geophysics
-
 ![](figs/fatiando-banner.png)
 
 **A day in the life of a Geophysicist often involves engaging in tasks such as
