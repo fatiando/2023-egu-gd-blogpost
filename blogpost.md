@@ -157,7 +157,7 @@ You can find his social media handles in his personal website:
 
 
 
-[santisoler]: https://www.santisoler.com
+[santisoler]: https://www.santisoler.com/about.html
 [fatiando]: https://www.fatiando.org
 [contact]: https://www.fatiando.org/contact/
 [founders]: https://www.fatiando.org/community/#project-founders
