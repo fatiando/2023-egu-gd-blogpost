@@ -82,7 +82,7 @@ regional field with deep equivalent sources, and producing a gridded product of
 this residual field using equivalent sources.
 
 ![Processed gravity data over Bushveld, Southern Africa: (a) observed gravity
-data, (b) gravity disturbance. (c) Bouguer gravity disturbance, and (d) regular
+data, (b) gravity disturbance, (c) Bouguer gravity disturbance, and (d) regular
 grid of the residual gravity field (obtained after the removal of the regional
 field).](figs/south-africa-gravity.png)
 
