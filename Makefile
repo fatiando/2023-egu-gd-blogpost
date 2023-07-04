@@ -1,7 +1,10 @@
 PROJECT = blogpost
 REFERENCES = references.bib
-FIGS = figs
+FIGSDIR = figs
+FIGURES := $(FIGSDIR)/$(wildcard *)
 OUTDIR = _build
+
+.PHONY: pad docx html clean show serve figures
 
 pdf: $(OUTDIR)/$(PROJECT).pdf
 
@@ -18,6 +21,8 @@ show: $(OUTDIR)/$(PROJECT).pdf
 serve:
 	python serve.py
 
+figures: $(FIGURES) | $(OUTDIR)/$(FIGSDIR)
+	cp -r $< $(OUTDIR)
 
 $(OUTDIR)/$(PROJECT).pdf: $(PROJECT).md | $(OUTDIR) $(REFERENCES)
 	pandoc -s --bibliography $(REFERENCES) --citeproc -o $@ $<
@@ -25,11 +30,11 @@ $(OUTDIR)/$(PROJECT).pdf: $(PROJECT).md | $(OUTDIR) $(REFERENCES)
 $(OUTDIR)/$(PROJECT).docx: $(PROJECT).md | $(OUTDIR) $(REFERENCES)
 	pandoc -s --bibliography $(REFERENCES) --citeproc -o $@ $<
 
-$(OUTDIR)/index.html: $(PROJECT).md | $(OUTDIR) $(REFERENCES) $(OUTDIR)/$(FIGS)
+$(OUTDIR)/index.html: $(PROJECT).md | $(OUTDIR) $(REFERENCES) figures
 	pandoc -s --bibliography $(REFERENCES) --citeproc -o $@ $<
 
-$(OUTDIR)/$(FIGS): $(FIGS) | $(OUTDIR)
-	cp -r $< $@
-
 $(OUTDIR):
+	mkdir $@
+
+$(OUTDIR)/$(FIGSDIR):
 	mkdir $@
