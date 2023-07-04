@@ -15,6 +15,7 @@ guide us through the world of Fatiando, providing insights into its
 capabilities and sharing how you can actively participate and contribute to
 this exciting project.**
 
+
 [Fatiando a Terra][fatiando] is a community-driven project with the goal to
 build open-source Python tools for geophysics.
 
@@ -139,7 +140,24 @@ website][fatiando].
 ::: {#refs}
 :::
 
+## Bio
 
+![](figs/santisoler.png)
+
+Santiago Soler is a Physicist and PhD in Geophysics.
+He is interested in researching new methods for processing and modelling
+gravity and magnetic data, and applying geophysical inversions on timely
+environmental problems.
+He's committed to contribute to open-source scientific software and to create
+a more diverse, open and reproducible science.
+He's one of the core developers of [Fatiando a Terra][fatiando] and
+[SimPEG][simpeg].
+You can find his social media handles in his personal website:
+[santisoler.com][santisoler].
+
+
+
+[santisoler]: https://www.santisoler.com
 [fatiando]: https://www.fatiando.org
 [contact]: https://www.fatiando.org/contact/
 [founders]: https://www.fatiando.org/community/#project-founders
