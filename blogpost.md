@@ -1,8 +1,8 @@
 ---
-title: "Fatiando a terra: a journey into open-source software for Geophysics"
+title: "Fatiando a Terra: a journey into open-source software for Geophysics"
 ---
 
-# Fatiando a terra: a journey into open-source software for Geophysics
+# Fatiando a Terra: a journey into open-source software for Geophysics
 
 ![](figs/fatiando-banner.png)
 

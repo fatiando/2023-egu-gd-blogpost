@@ -2,7 +2,7 @@
 
 | **Information** | |
 |---|---|
-| **Title** | Fatiando a terra: a journey into open-source software for Geophysics |
+| **Title** | Fatiando a Terra: a journey into open-source software for Geophysics |
 | **Author** | [Santiago Soler][santisoler] |
 | **Editor** | [Constanza Rodriguez Piceda][constanza] |
 
