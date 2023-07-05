@@ -18,11 +18,12 @@ clean:
 show: $(OUTDIR)/$(PROJECT).pdf
 	xdg-open $<
 
-serve:
+serve: html
 	python serve.py
 
 figures: $(FIGURES) | $(OUTDIR)/$(FIGSDIR)
 	cp -r $^ $(OUTDIR)/$(FIGSDIR)
+	cp -r $^ -t $(OUTDIR)/$(FIGSDIR)
 
 $(OUTDIR)/$(PROJECT).pdf: $(PROJECT).md | $(OUTDIR) $(REFERENCES)
 	pandoc -s --bibliography $(REFERENCES) --citeproc -o $@ $<
