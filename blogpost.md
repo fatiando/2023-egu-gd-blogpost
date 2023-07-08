@@ -50,7 +50,7 @@ data on continental scales [@uieda2016].
 large scale structures using [_tesseroids_][tesseroids], also known as
 spherical prisms, that take into account the curvature of the Earth.
 They come handy also in data processing steps, like removing the gravity effect
-of topography, also known as _terrain correction_.
+of topography, also known as _terrain correction_ (Figure 1).
 
 ![Gravity effect of the terrain over South America, computed using
 tesseroids.](figs/terrain-correction-south-america.png)
@@ -66,7 +66,7 @@ the computational limitations of classical equivalent sources, allowing to
 interpolate very large gravity and magnetic datasets.
 For example, they allowed us to generate
 a regular grid of almost 2 million (!) gravity observations over Australia on
-a desktop computer [@soler2021].
+a desktop computer (Figure 2) [@soler2021].
 
 ![Observed (a-b) and interpolated (c-d) a large gravity dataset over Australia.
 The interpolation was carried out through Gradient-boosted equivalent
@@ -78,7 +78,7 @@ removing normal gravity with [Boule][boule]'s ellipsoids (reference ellipsoids
 used to define geodetic coordinates, like the WGS84), computing the terrain
 correction by forward modelling a model of the topography, removing the
 regional field with deep equivalent sources, and producing a gridded product of
-this residual field using equivalent sources.
+this residual field using equivalent sources (Figure 3).
 
 ![Processed gravity data over Bushveld, Southern Africa: (a) observed gravity
 data, (b) gravity disturbance, (c) Bouguer gravity disturbance, and (d) regular
@@ -94,7 +94,7 @@ a Terra](figs/fatiando-steering-council.png)
 ![Fatiando a Terra Contributors](figs/fatiando-contributors.png)
 
 Fatiando developers and contributors are committed to build a more [open and
-reproducible science][blogpost-open-science].
+reproducible science][blogpost-open-science] (Figure 4).
 All its software is released under open-source licences, making it freely
 accessible to any researcher, and helping to make scientific results obtained
 by using it more reproducible.
