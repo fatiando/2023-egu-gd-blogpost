@@ -88,10 +88,8 @@ field).](figs/south-africa-gravity.png)
 
 ## Our goal: open and reproducible science
 
-![Fatiando a Terra Steering Council of Fatiando
-a Terra](figs/fatiando-steering-council.png)
-
-![Fatiando a Terra Contributors](figs/fatiando-contributors.png)
+![Fatiando a Terra Steering Council and
+Contributors](figs/fatiando-contributors.png)
 
 Fatiando developers and contributors are committed to build a more [open and
 reproducible science][blogpost-open-science] (Figure 4).
