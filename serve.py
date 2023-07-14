@@ -10,6 +10,7 @@ watch = [
 ]
 build_dir = "_build"
 
+
 server = livereload.Server()
 make_html = livereload.shell("make html")
 for path in watch:
