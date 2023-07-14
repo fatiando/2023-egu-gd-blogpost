@@ -56,7 +56,7 @@ of topography, also known as _terrain correction_ (Figure 1).
 tesseroids.](figs/terrain-correction-south-america.png)
 
 [Harmonica][harmonica] offers classes to interpolate gravity and magnetic data
-through the _equivalent sources technique_, a methods that relies on
+through the _equivalent sources technique_, a method that relies on
 the non-uniqueness of potential fields. It consists in defining a set of
 synthetic sources and adjust their masses so they generate the same
 gravitational field as the observed one. Once we define them, we can use them
