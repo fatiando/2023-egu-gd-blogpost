@@ -5,6 +5,7 @@
 | **Title** | Fatiando a Terra: a journey into open-source software for Geophysics |
 | **Author** | [Santiago Soler][santisoler] |
 | **Editor** | [Constanza Rodriguez Piceda][constanza] |
+| **Read the blogpost** | https://blogs.egu.eu/divisions/gd/2023/07/19/fatiando-a-terra |
 
 ## How to build
 
